@@ -1,0 +1,24 @@
+{
+    "name": "IT AcadEMI",
+    "short_name": "IT AcadEMI",
+    "icons": [
+        {
+            "src": "./hexalogo_192x192.jpg",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./hexalogo_1_512x512.jpg",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "https://itacademi.netlify.app/",
+    "theme_color": "#8DD9CC",
+    "background_color": "#30BFBF",
+    "display": "standalone",
+    "scope": "https://itacademi.netlify.app/",
+    "prefer_related_applications" : "true"  
+}
