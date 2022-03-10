@@ -253,5 +253,24 @@
       <script src="assets/js/form-validator.min.js"></script>
       <script src="assets/js/contact-form-script.js"></script> 
       <script src="assets/js/main.js"></script>
+      <script>
+         document
+         .querySelector("form")
+         .addEventListener("submit", handleSubmit);
+
+         const handleSubmit = (e) => {
+         e.preventDefault();
+         let myForm = document.getElementById("contactForm");
+         let formData = new FormData(myForm);
+         fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+         })
+            
+            .catch((error) => alert(error));
+         };
+      </script>
+     
    </body>
 </html>
