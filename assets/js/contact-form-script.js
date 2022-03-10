@@ -11,36 +11,11 @@
         } else {
             // everything looks good!
             event.preventDefault();
-            submitForm();
+            formSuccess();
         }
     });
 
 
-    function submitForm(){
-        // Initiate Variables With Form Content
-        var form_data = new FormData();
-
-        form_data.append("name" , $("#name").val());
-        form_data.append("email" , $("#email").val());
-        form_data.append("msg_subject" , $("#msg_subject").val());
-        form_data.append("phone_number" , $("#phone_number").val());
-        form_data.append("message" , $("#message").val());
-        
-        $(':input[type="submit"]').prop('disabled', true);
-
-        var ajax_request = new XMLHttpRequest();
-
-        ajax_request.open('POST','../../backend.php');
-        ajax_request.send(form_data);
-
-        ajax_request.onreadystatechange = function() {
-            if (ajax_request.readyState == 4 && ajax_request.status == 200) {
-                $(':input[type="submit"]').prop('disabled', false);
-                formSuccess();
-            }
-        }
-        
-    }
 
     function formSuccess(){
         $("#contactForm")[0].reset();

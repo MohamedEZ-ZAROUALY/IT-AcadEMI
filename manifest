@@ -15,10 +15,10 @@
             "purpose": "any maskable"
         }
     ],
-    "start_url": "https://itacademi.netlify.app/",
+    "start_url": ".",
     "theme_color": "#8DD9CC",
     "background_color": "#30BFBF",
     "display": "standalone",
-    "scope": "https://itacademi.netlify.app/",
+    "scope": ".",
     "prefer_related_applications" : "true"  
 }
