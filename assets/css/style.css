@@ -1896,7 +1896,7 @@ img {
 .main-banner {
   height: 770px;
   position: relative;
-  background-image: url(../img/1);
+  background-image: url(../img/main-banne.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -2420,7 +2420,7 @@ img {
 }
 .single-services-box .icon {
   margin-bottom: 18px;
-  background-color: #ffe4d9;
+  background-color: #bed9eb;
   width: 75px;
   height: 75px;
   line-height: 75px;
@@ -2649,7 +2649,7 @@ img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../img/woman.jpg);
+  background-image: url(../img/webinar_6.jpg);
 }
 .webinar-video-image img {
   display: none;
