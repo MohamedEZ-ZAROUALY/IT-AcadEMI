@@ -103,7 +103,7 @@
                      </div>
                   </div>
                   <div class="col-lg-7 col-md-12">
-                     <form id="registerForm" method="post" action="backend.php">
+                     <form id="joinForm" method="post" netlify-data="true">
                         <div class="row">
                            <div class="col-lg-6 col-md-6">
                               <div class="form-group">
@@ -269,8 +269,26 @@
       <script src="assets/js/jquery.meanmenu.js"></script>
       <script src="assets/js/wow.min.js"></script>
       <script src="assets/js/form-validator.min.js"></script>
-      <!-- <script src="assets/js/contact-form-script.js"></script> -->
       <script src="assets/js/main.js"></script>
+      <script>
+         document
+         .querySelector("form")
+         .addEventListener("submit", handleSubmit);
+
+         const handleSubmit = (e) => {
+         e.preventDefault();
+         let myForm = document.getElementById("joinForm");
+         let formData = new FormData(myForm);
+         fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+         })
+            
+            .catch((error) => alert(error));
+         };
+      </script>
+     
    </body>
 </html>
 
